@@ -1,4 +1,3 @@
-
 # Álgebra Linear: Vetores e Matrizes
 
 ## Índice
@@ -23,7 +22,8 @@ onde \( v_1 \) e \( v_2 \) são números reais que indicam as coordenadas do vet
 
 A adição de vetores é feita componente por componente. Por exemplo, se temos dois vetores:
 
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \quad \text{e} \quad \mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \]
+\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
+\[ \mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \]
 
 então a soma \( \mathbf{v} + \mathbf{w} \) é dada por:
 
@@ -33,7 +33,8 @@ então a soma \( \mathbf{v} + \mathbf{w} \) é dada por:
 
 A multiplicação de um vetor por um escalar (número real) também é feita componente por componente. Por exemplo, se:
 
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \quad \text{e} \quad c \quad \text{é um escalar} \]
+\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
+\[ c \quad \text{é um escalar} \]
 
 então \( c \mathbf{v} \) é dado por:
 
@@ -43,7 +44,8 @@ então \( c \mathbf{v} \) é dado por:
 
 O produto escalar entre dois vetores \( \mathbf{v} \) e \( \mathbf{w} \) é calculado como a soma dos produtos de suas componentes correspondentes. Se:
 
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \quad \text{e} \quad \mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \]
+\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
+\[ \mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \]
 
 então o produto escalar \( \mathbf{v} \cdot \mathbf{w} \) é dado por:
 
@@ -83,7 +85,8 @@ A multiplicação de matrizes não é comutativa e é definida apenas quando o n
 
 Considere as seguintes matrizes:
 
-\[ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \]
+\[ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \]
+\[ B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \]
 
 - **Adição de Matrizes:** 
 
@@ -91,7 +94,7 @@ Considere as seguintes matrizes:
 
 - **Multiplicação por Escalar:** 
 
-Se \( c = 2 \), então
+Se \( c = 2 \), então:
 
 \[ cA = \begin{bmatrix} 2 \cdot 1 & 2 \cdot 2 \\ 2 \cdot 3 & 2 \cdot 4 \end{bmatrix} = \begin{bmatrix} 2 & 4 \\ 6 & 8 \end{bmatrix} \]
 

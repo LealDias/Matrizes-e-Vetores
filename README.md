@@ -1,55 +1,38 @@
 # Álgebra Linear: Vetores e Matrizes
 
-## Índice
-
-1. [Vetores](#vetores)
-2. [Operações com Vetores](#operações-com-vetores)
-3. [Matrizes](#matrizes)
-4. [Operações com Matrizes](#operações-com-matrizes)
-5. [Código em Python](#código-em-python)
-
 ## Vetores
 
 Um vetor é uma entidade matemática que possui magnitude (tamanho) e direção. Em Álgebra Linear, os vetores são representados como sequências ordenadas de números. Por exemplo, um vetor bidimensional pode ser representado como:
 
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
+\[ v = [v1, v2] \]
 
-onde \( v_1 \) e \( v_2 \) são números reais que indicam as coordenadas do vetor no plano.
+### Operações com Vetores
 
-## Operações com Vetores
+#### Adição de Vetores
 
-### Adição de Vetores
+A adição de vetores é feita componente por componente. Por exemplo, se temos dois vetores `v` e `w`:
+\[ v = [v1, v2] \]
+\[ w = [w1, w2] \]
 
-A adição de vetores é feita componente por componente. Por exemplo, se temos dois vetores:
+Então a soma `v + w` é:
+\[ v + w = [v1 + w1, v2 + w2] \]
 
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
-\[ \mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \]
-
-então a soma \( \mathbf{v} + \mathbf{w} \) é dada por:
-
-\[ \mathbf{v} + \mathbf{w} = \begin{bmatrix} v_1 + w_1 \\ v_2 + w_2 \end{bmatrix} \]
-
-### Multiplicação por Escalar
+#### Multiplicação por Escalar
 
 A multiplicação de um vetor por um escalar (número real) também é feita componente por componente. Por exemplo, se:
+\[ v = [v1, v2] \]
+\[ c = 2 \] (um escalar)
 
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
-\[ c \quad \text{é um escalar} \]
+Então `c * v` é:
+\[ c * v = [c * v1, c * v2] \]
 
-então \( c \mathbf{v} \) é dado por:
+#### Produto Escalar (Produto Interno)
 
-\[ c \mathbf{v} = \begin{bmatrix} c v_1 \\ c v_2 \end{bmatrix} \]
+O produto escalar entre dois vetores `v` e `w` é calculado como a soma dos produtos de suas componentes correspondentes:
+\[ v = [v1, v2] \]
+\[ w = [w1, w2] \]
 
-### Produto Escalar (Produto Interno)
-
-O produto escalar entre dois vetores \( \mathbf{v} \) e \( \mathbf{w} \) é calculado como a soma dos produtos de suas componentes correspondentes. Se:
-
-\[ \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \]
-\[ \mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \]
-
-então o produto escalar \( \mathbf{v} \cdot \mathbf{w} \) é dado por:
-
-\[ \mathbf{v} \cdot \mathbf{w} = v_1 w_1 + v_2 w_2 \]
+\[ v \cdot w = v1 * w1 + v2 * w2 \]
 
 ## Matrizes
 
@@ -57,29 +40,23 @@ Uma matriz é uma tabela retangular de números (ou elementos), organizados em l
 
 ### Representação de Matrizes
 
-Uma matriz \( A \) com \( m \) linhas e \( n \) colunas é representada como:
-
+Uma matriz `A` com `m` linhas e `n` colunas é representada como:
 \[ A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix} \]
 
-onde \( a_{ij} \) representa o elemento na linha \( i \) e coluna \( j \) da matriz.
+### Operações com Matrizes
 
-## Operações com Matrizes
+#### Adição de Matrizes
 
-### Adição de Matrizes
+A adição de matrizes é feita elemento por elemento. Se tivermos duas matrizes `A` e `B` do mesmo tamanho, a soma `A + B` é:
+\[ A + B = \begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12} \\ a_{21} + b_{21} & a_{22} + b_{22} \end{bmatrix} \]
 
-A adição de matrizes é feita elemento por elemento. Se tivermos duas matrizes \( A \) e \( B \) do mesmo tamanho, a soma \( A + B \) é dada por:
-
-\[ A + B = \begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\ a_{21} + b_{21} & a_{22} + b_{22} & \cdots & a_{2n} + b_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn} \end{bmatrix} \]
-
-### Multiplicação por Escalar
+#### Multiplicação por Escalar
 
 Multiplicar uma matriz por um escalar envolve multiplicar cada elemento da matriz pelo escalar.
 
-### Multiplicação de Matrizes
+#### Multiplicação de Matrizes
 
-A multiplicação de matrizes não é comutativa e é definida apenas quando o número de colunas da primeira matriz é igual ao número de linhas da segunda matriz. Se \( A \) é uma matriz \( m \times n \) e \( B \) é uma matriz \( n \times p \), então o produto \( AB \) é uma matriz \( m \times p \) onde cada elemento \( c_{ij} \) é dado por:
-
-\[ c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj} \]
+A multiplicação de matrizes não é comutativa e é definida apenas quando o número de colunas da primeira matriz é igual ao número de linhas da segunda matriz. Se `A` é uma matriz `m x n` e `B` é uma matriz `n x p`, então o produto `AB` é uma matriz `m x p`.
 
 ### Exemplo
 
@@ -88,18 +65,15 @@ Considere as seguintes matrizes:
 \[ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \]
 \[ B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \]
 
-- **Adição de Matrizes:** 
-
+- **Adição de Matrizes:**
 \[ A + B = \begin{bmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{bmatrix} = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix} \]
 
-- **Multiplicação por Escalar:** 
+- **Multiplicação por Escalar:**
 
-Se \( c = 2 \), então:
-
+Se `c = 2`, então:
 \[ cA = \begin{bmatrix} 2 \cdot 1 & 2 \cdot 2 \\ 2 \cdot 3 & 2 \cdot 4 \end{bmatrix} = \begin{bmatrix} 2 & 4 \\ 6 & 8 \end{bmatrix} \]
 
-- **Multiplicação de Matrizes:** 
-
+- **Multiplicação de Matrizes:**
 \[ AB = \begin{bmatrix} 1 \cdot 5 + 2 \cdot 7 & 1 \cdot 6 + 2 \cdot 8 \\ 3 \cdot 5 + 4 \cdot 7 & 3 \cdot 6 + 4 \cdot 8 \end{bmatrix} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix} \]
 
 ## Código em Python
